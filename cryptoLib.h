@@ -7,4 +7,6 @@ int inverse(long long a, long long n);
 
 int solve_system_CRT(long long a, long long p, long long b, long long q);
 
+unsigned int Exponent(long long x, long long e, long long p); //multiply & square algorithm
+
 #endif

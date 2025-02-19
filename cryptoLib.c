@@ -53,3 +53,17 @@ int solve_system_CRT(long long a, long long p, long long b, long long q) {
 
     return (multRes1 + multRes2) % bigN;
 }
+
+unsigned int Exponent(long long x, long long e, long long p) {
+    unsigned int result = 1;
+    x = x % p;
+
+    // process exponent bit by bit
+    while (e > 0) {
+        if (e & 1) result = (unsigned int)((result * x) % p);
+        e >>= 1; //shift right
+        x = (x * x) % p;
+    }
+    return result;
+}
+
